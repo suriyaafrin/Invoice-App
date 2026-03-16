@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:#010048;
+    color: white;
+}
+.city{
+    display: flex;
+    align-items: center;
+    
+}
+form{
+    padding: 40px;
+}
+form p{
+    color: rgb(191, 130, 247);
+    font-weight: 600;
+    font-size: 25px;
+}
+#street{
+    height: 30px;
+    width: 400px;
+    border-radius: 6px;
+
+}

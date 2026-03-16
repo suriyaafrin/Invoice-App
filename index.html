@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="input-form">
+        <p>Bill From</p>
+        <!-- <p>Street Address</p> -->
+        Street Address
+        <br>
+        <input id="street" type="text" placeholder="Enter Street Address">
+        <br>
+        <br>
+        <div class="city">
+            City
+            <input type="text" placeholder="City">
+            Post Code
+            <input type="text" placeholder="Post Code">
+            Country
+            <input type="text" placeholder="Country">
+        </div>
+        <p>Bill To</p>
+        Client's Name
+        <input type="text" placeholder="Name">
+        Client's Email
+        <input type="text" placeholder="Email">
+        Street Address 
+        <input type="text" placeholder="Enter Street Address">
+        <div class="city">
+            City 
+            <input type="text" placeholder="City">
+            Post Code
+            <input type="text" placeholder="Post Code">
+            Country
+            <input type="text" placeholder="Country">
+        </div>
+        <div class="invoiceDate">
+            Invoice Date
+            <input type="date" >
+            Payment Terms
+            <input type="text" placeholder="Net 30 Days">
+        </div>
+        <div class="itemList">
+            Item Name
+            <input type="text">
+            Qty.
+            <input type="number">
+            Price
+            <input type="number">
+            Total
+            <input type="number">
+            <i class="fa-solid fa-trash"></i>
+            <button class="btn"><i class="fa-solid fa-plus"></i> Add New Item</button>
+        </div>
+        <div class="submit">
+            <button>Cancel</button>
+            <button>Save Changes</button>
+        </div>
+    </form>
+</body>
+</html>
