@@ -84,27 +84,10 @@
         </div>
         <br>
         <p>Item List</p>
-        <div class="itemList">
-            <div class="itemName">
-                Item Name
-                <input type="text" id="item">
-            </div>
-            <div class="itemName">
-                Qty.
-                <input type="number" id="qty">
-            </div>
-            <div class="itemName">
-                Price
-                <input type="number" id="price">
-            </div>
-            <div class="itemName">
-                Total
-                <input type="number" id="total" readonly>
-            </div>
-            <div class="trash">
-                <i class="fa-solid fa-trash"></i>
-            </div>
-        </div>
+
+        <!-- dynamic rows injected here by app.js -->
+        <div id="itemRows"></div>
+
         <button class="btn"><i class="fa-solid fa-plus"></i> Add New Item</button>
         <div class="submit">
             <button class="cancel">Cancel</button>
