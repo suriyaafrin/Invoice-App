@@ -1,189 +1,222 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-body{
-    background-color:#010048;
+
+body {
+    background-color: #010048;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
 
-
-form{
+form {
     padding: 40px;
     border: 2px solid white;
-    width: 50vh;
-    background-color:#010048;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
+    width: 550px;
+    background-color: #010048;
 }
-form p{
+
+form p {
     color: rgb(191, 130, 247);
     font-weight: 600;
     font-size: 25px;
 }
-#street{
-    height: 30px;
-    width: 400px;
-    border-radius: 6px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
 
+/* ── all text inputs base style ── */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
+    height: 30px;
+    background-color: #1d275e;
+    border: none;
+    border-radius: 6px;
+    padding-left: 12px;
+    color: white;
+    font-size: 14px;
+    outline: none;
 }
-.city{
+
+/* ── Bill From street ── */
+#fromStreet {
+    width: 100%;
+}
+
+/* ── city row boxes ── */
+.city {
     display: flex;
     align-items: center;
     gap: 10px;
-    
 }
-.box{
+
+.box {
     display: flex;
-    align-items:start;
+    align-items: start;
     flex-direction: column;
+    gap: 4px;
 }
-#ct1{
-    height: 30px;
+
+#fromCity,
+#toCity {
     width: 120px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
 }
-.name{
+
+#fromPost,
+#toPost {
+    width: 120px;
+}
+
+#fromCountry,
+#toCountry {
+    width: 120px;
+}
+
+/* ── Bill To fields ── */
+.name {
     display: flex;
     align-items: start;
     flex-direction: column;
+    gap: 4px;
 }
-.invoiceDate{
+
+#clientName,
+#clientEmail,
+#toStreet {
+    width: 100%;
+}
+
+/* ── Invoice date row ── */
+.invoiceDate {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.date{
-    display: flex;
-    align-items:start;
-    flex-direction: column;
-    
-}
-#ct2{
-    height: 30px;
-    width: 190px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
-}
-.des{
+
+.date {
     display: flex;
     align-items: start;
     flex-direction: column;
+    gap: 4px;
 }
-.itemList{
+
+#invoiceDate,
+#paymentTerms {
+    width: 190px;
+}
+
+/* ── Project description ── */
+.des {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#projectDesc {
+    width: 100%;
+}
+
+/* ── Item list row ── */
+.itemList {
     display: flex;
     align-items: flex-end;
-    /* flex-direction: column; */
     gap: 10px;
 }
-.itemName{
+
+.itemName {
     display: flex;
-    align-items:start;
+    align-items: start;
     flex-direction: column;
-    
+    gap: 4px;
 }
-#item{
-    height: 30px;
+
+#item {
     width: 180px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
 }
-#qty{
-    height: 30px;
-    width: 30px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
+
+#qty {
+    width: 50px;
 }
-#price{
-    height: 30px;
-    width: 70px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
+
+#price {
+    width: 80px;
 }
-#total{
-    height: 30px;
-    width: 60px;
-    background-color: #1d275e;
-    border: none;                
-    border-radius: 6px;         
-    padding-left: 12px;         
-    color: white;              
-    font-size: 14px;
+
+#total {
+    width: 80px;
 }
-.trash{
+
+/* ── Trash icon ── */
+.trash {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 30px;
     width: 30px;
-    justify-content: center;
-    /* border: 2px solid white; */
-    flex-direction: row;
+    cursor: pointer;
+    color: rgb(191, 130, 247);
 }
-.btn{
+
+/* ── Add item button ── */
+.btn {
     height: 40px;
-    width: 40vh;
+    width: 100%;
     border-radius: 50px;
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     background-color: #1d275e;
-    border: none;                         
-    color: white;              
+    border: none;
+    color: white;
     font-size: 14px;
+    cursor: pointer;
 }
-.submit{
+
+.btn:hover {
+    background-color: #28358a;
+}
+
+/* ── Submit buttons ── */
+.submit {
     display: flex;
     align-items: center;
-    justify-content:end ;
-    padding: 20px;
+    justify-content: end;
+    padding: 20px 0px;
     gap: 20px;
 }
-.cancel{
+
+.cancel {
     height: 40px;
     width: 100px;
-    border-radius:30px ;
+    border-radius: 30px;
     background-color: #1d275e;
-    border: none;                         
-    padding-left: 12px;         
-    color: white;              
+    border: none;
+    color: white;
     font-size: 14px;
+    cursor: pointer;
 }
-.save{
+
+.cancel:hover {
+    background-color: #28358a;
+}
+
+.save {
     height: 40px;
     width: 120px;
-    border-radius:30px ;
+    border-radius: 30px;
     background-color: rgb(191, 130, 247);
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save:hover {
+    background-color: rgb(170, 100, 230);
 }
