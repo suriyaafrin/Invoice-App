@@ -1,13 +1,10 @@
-// safely get value by id
 function get(id) {
   const el = document.getElementById(id);
   return el ? el.value : "";
 }
 
-// ── items array ──
 let items = [];
 
-// ── render rows inside existing .itemList structure ──
 function renderRows() {
   const container = document.getElementById("itemRows");
   container.innerHTML = "";
@@ -42,26 +39,22 @@ function renderRows() {
     const priceInput = div.querySelector("#price");
     const totalInput = div.querySelector("#total");
 
-    // update name
     nameInput.addEventListener("input", function () {
       items[idx].name = nameInput.value;
     });
-
-    // update qty → recalculate total
+l
     qtyInput.addEventListener("input", function () {
       items[idx].qty   = parseFloat(qtyInput.value) || 0;
       items[idx].total = items[idx].qty * items[idx].price;
       totalInput.value = items[idx].total.toFixed(2);
     });
 
-    // update price → recalculate total
     priceInput.addEventListener("input", function () {
       items[idx].price = parseFloat(priceInput.value) || 0;
       items[idx].total = items[idx].qty * items[idx].price;
       totalInput.value = items[idx].total.toFixed(2);
     });
 
-    // trash — delete this row
     div.querySelector(".trash").addEventListener("click", function () {
       items.splice(idx, 1);
       renderRows();
@@ -71,7 +64,6 @@ function renderRows() {
   });
 }
 
-// ── Add New Item button ──
 const addBtn = document.querySelector(".btn");
 if (addBtn) {
   addBtn.addEventListener("click", function (e) {
@@ -81,7 +73,6 @@ if (addBtn) {
   });
 }
 
-// ── Save button ──
 const save = document.querySelector(".save");
 if (save) {
   save.addEventListener("click", (e) => {
@@ -103,8 +94,6 @@ if (save) {
       invoiceDate:  get("invoiceDate"),
       paymentTerms: get("paymentTerms"),
       projectDesc:  get("projectDesc"),
-
-      // save all rows as array
       items: items,
     };
 

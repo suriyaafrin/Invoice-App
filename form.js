@@ -1,21 +1,19 @@
 const d = JSON.parse(localStorage.getItem("invoiceData"));
 
 if (d) {
-  // Billed To
   document.getElementById("showClientName").textContent  = d.clientName;
   document.getElementById("showClientEmail").textContent = d.clientEmail;
   document.getElementById("showToStreet").textContent    = d.toStreet;
   document.getElementById("showToCity").textContent      = d.toCity + " " + d.toPost + ", " + d.toCountry;
 
-  // Billed From
+
   document.getElementById("showFromStreet").textContent = d.fromStreet;
   document.getElementById("showFromCity").textContent   = d.fromCity + " " + d.fromPost + ", " + d.fromCountry;
 
-  // Date and Payment Terms
+
   document.getElementById("showDate").textContent         = d.invoiceDate;
   document.getElementById("showPaymentTerms").textContent = d.paymentTerms;
 
-  // loop all items and add a row for each
   const table = document.getElementById("itemTable");
   let subtotal = 0;
 
@@ -36,7 +34,7 @@ if (d) {
     table.appendChild(tr);
   });
 
-  // Totals
+
   const tax   = subtotal * 0.05;
   const grand = subtotal + tax;
 

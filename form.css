@@ -1,8 +1,8 @@
 *{
     margin: 0px;
     padding: 0px;
-    
 }
+
 /* .invoice{
     background-color: beige;
 } */
@@ -10,8 +10,9 @@ body{
    
     width: 70vh;
     /* border: 2px solid black; */
-    padding: 20px; 
+    padding: 20px;
 }
+
 .sec{
     background-color: beige;
 }

@@ -1,222 +1,154 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
+/* Body */
 body {
-    background-color: #010048;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  background: #010048;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* Form box */
 form {
-    padding: 40px;
-    border: 2px solid white;
-    width: 550px;
-    background-color: #010048;
+  width: 550px;
+  padding: 40px;
+  border: 2px solid white;
+  background: #010048;
 }
 
+/* Section titles */
 form p {
-    color: rgb(191, 130, 247);
-    font-weight: 600;
-    font-size: 25px;
+  color: rgb(191, 130, 247);
+  font-size: 25px;
+  font-weight: 600;
 }
 
-/* ── all text inputs base style ── */
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="number"] {
-    height: 30px;
-    background-color: #1d275e;
-    border: none;
-    border-radius: 6px;
-    padding-left: 12px;
-    color: white;
-    font-size: 14px;
-    outline: none;
+/* All inputs */
+input {
+  height: 30px;
+  background: #1d275e;
+  border: none;
+  border-radius: 6px;
+  padding-left: 10px;
+  color: white;
+  outline: none;
 }
 
-/* ── Bill From street ── */
-#fromStreet {
-    width: 100%;
-}
-
-/* ── city row boxes ── */
-.city {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.box {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 4px;
-}
-
-#fromCity,
-#toCity {
-    width: 120px;
-}
-
-#fromPost,
-#toPost {
-    width: 120px;
-}
-
-#fromCountry,
-#toCountry {
-    width: 120px;
-}
-
-/* ── Bill To fields ── */
-.name {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 4px;
-}
-
+/* Full width inputs */
+#fromStreet,
 #clientName,
 #clientEmail,
-#toStreet {
-    width: 100%;
+#toStreet,
+#projectDesc {
+  width: 100%;
 }
 
-/* ── Invoice date row ── */
+/* Row layout (city, date, etc.) */
+.city,
 .invoiceDate {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.date {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 4px;
+/* Small input boxes */
+#fromCity, #toCity,
+#fromPost, #toPost,
+#fromCountry, #toCountry {
+  width: 120px;
 }
 
 #invoiceDate,
 #paymentTerms {
-    width: 190px;
+  width: 190px;
 }
 
-/* ── Project description ── */
-.des {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 4px;
-}
-
-#projectDesc {
-    width: 100%;
-}
-
-/* ── Item list row ── */
-.itemList {
-    display: flex;
-    align-items: flex-end;
-    gap: 10px;
-}
-
+/* Column layout */
+.box,
+.name,
+.date,
+.des,
 .itemName {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-#item {
-    width: 180px;
+/* Item row */
+.itemList {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
 }
 
-#qty {
-    width: 50px;
-}
+/* Item input sizes */
+#item { width: 180px; }
+#qty { width: 50px; }
+#price, #total { width: 80px; }
 
-#price {
-    width: 80px;
-}
-
-#total {
-    width: 80px;
-}
-
-/* ── Trash icon ── */
+/* Trash button */
 .trash {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-    color: rgb(191, 130, 247);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(191, 130, 247);
 }
 
-/* ── Add item button ── */
+/* Add button */
 .btn {
-    height: 40px;
-    width: 100%;
-    border-radius: 50px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: #1d275e;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: none;
+  background: #1d275e;
+  color: white;
+  cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #28358a;
+  background: #28358a;
 }
 
-/* ── Submit buttons ── */
+/* Bottom buttons */
 .submit {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 20px 0px;
-    gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.cancel,
+.save {
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .cancel {
-    height: 40px;
-    width: 100px;
-    border-radius: 30px;
-    background-color: #1d275e;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
+  width: 100px;
+  background: #1d275e;
 }
 
 .cancel:hover {
-    background-color: #28358a;
+  background: #28358a;
 }
 
 .save {
-    height: 40px;
-    width: 120px;
-    border-radius: 30px;
-    background-color: rgb(191, 130, 247);
-    border: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+  width: 120px;
+  background: rgb(191, 130, 247);
+  font-weight: 600;
 }
 
 .save:hover {
-    background-color: rgb(170, 100, 230);
+  background: rgb(170, 100, 230);
 }
