@@ -42,7 +42,6 @@ function renderRows() {
     nameInput.addEventListener("input", function () {
       items[idx].name = nameInput.value;
     });
-l
     qtyInput.addEventListener("input", function () {
       items[idx].qty   = parseFloat(qtyInput.value) || 0;
       items[idx].total = items[idx].qty * items[idx].price;

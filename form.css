@@ -3,24 +3,22 @@
     padding: 0px;
 }
 
-/* .invoice{
-    background-color: beige;
-} */
 body{
-   
     width: 70vh;
-    /* border: 2px solid black; */
     padding: 20px;
+    margin: 0 auto; 
 }
 
 .sec{
     background-color: beige;
 }
+
 h1{
     font-size: 100px;
     font-weight: 600;
     color:rgb(107, 24, 24);
 }
+
 .row{
     display: grid;
     grid-template-columns: 120px 20px 1fr;
@@ -28,6 +26,7 @@ h1{
     align-items: start;
     margin: 30px;
 }
+
 .label{
     font-size: 18px;
     font-weight: bold;
@@ -41,30 +40,110 @@ h1{
 .value{
     color: rgb(100, 20, 20);
 }
+
 .description table{
-   border-top: 2px solid black;
-   border-bottom:2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     height: 30vh;
     width: 90%;
     margin: 30px;
     color: rgb(107, 24, 24);
 }
+
 td{
     border-top: 2px solid black;
-     
 }
 
 .lower-part{
     display: flex;
-    align-items:start;
+    align-items: start;
     justify-content: space-around;
     padding-top: 50px;
     color: rgb(107, 24, 24);
-    /* border: 2px solid black; */
 }
+
 .left{
     display: flex;
     align-items: start;
     justify-content: start;
     flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .row {
+        grid-template-columns: 100px 16px 1fr;
+        margin: 16px;
+    }
+
+    .label {
+        font-size: 15px;
+    }
+
+    .description table {
+        width: 95%;
+        margin: 16px;
+    }
+
+    .lower-part {
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 16px;
+    }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .row {
+        grid-template-columns: 80px 12px 1fr;
+        margin: 10px;
+    }
+
+    .label {
+        font-size: 13px;
+    }
+
+    .value {
+        font-size: 13px;
+    }
+
+    .description {
+        overflow-x: auto;
+    }
+
+    .description table {
+        width: 100%;
+        min-width: 300px;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+    td, th {
+        padding: 4px;
+    }
+
+    .lower-part {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+    }
 }
